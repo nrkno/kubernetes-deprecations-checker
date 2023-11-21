@@ -1,4 +1,16 @@
-# Simple shell script to check for deprecations in your cluster
+# Simple shell script to check for deprecations in your kubernetes cluster
+Starting at kubernetes version 1.25.
+Manual updates to `objects.json` is needed when new kubernetes deprecations are announced.
+
+## Dependencies:
+```
+kubectl
+jq
+xargs
+```
 
 ## Usage:
-`./deprecations.sh`
+```bash
+chmod +x deprecations.sh
+./deprecations.sh
+```
