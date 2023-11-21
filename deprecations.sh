@@ -16,6 +16,5 @@ for key in "${keys[@]}"; do
             | @tsv
             ' | column -t -s $'\t' -c 2
 
-
     done
 done
