@@ -19,5 +19,9 @@
     "v1.29": {
         "flowschema": "flowcontrol.apiserver.k8s.io/v1beta2",
         "PriorityLevelConfiguration": "flowcontrol.apiserver.k8s.io/v1beta2"
+    },
+    "v1.32": {
+        "flowschema": "flowcontrol.apiserver.k8s.io/v1beta3",
+        "PriorityLevelConfiguration": "flowcontrol.apiserver.k8s.io/v1beta3"
     }
 }
