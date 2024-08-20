@@ -1,5 +1,26 @@
 #!/bin/bash
-objects=$(curl -L https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.json)
+
+# check for dependencies
+if ! command -v jq &> /dev/null
+then
+    echo "jq could not be found, please install it."
+    exit 1
+fi
+
+if ! command -v xargs &> /dev/null
+then
+    echo "xargs could not be found, please install it."
+    exit 1
+fi
+
+if ! command -v kubectl &> /dev/null
+then
+    echo "kubectl could not be found, please install it."
+    exit 1
+fi
+
+# check for deprecated resources
+objects=$(curl -sL https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.json)
 keys=($(echo $objects | jq 'keys[]'))
 for key in "${keys[@]}"; do
     resources=$(echo $objects | jq -r .$key)

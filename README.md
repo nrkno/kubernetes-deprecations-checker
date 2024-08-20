@@ -4,7 +4,7 @@ Manual updates to `deprecations.json` is needed when new kubernetes deprecations
 
 ## Usage
 ```bash
-curl -L https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.sh | bash
+curl -sL https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.sh | bash
 ```
  or
 ```bash
