@@ -2,15 +2,19 @@
 Starting at kubernetes version 1.25.
 Manual updates to `deprecations.json` is needed when new kubernetes deprecations are announced.
 
+## Usage
+```bash
+curl -L https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.sh | bash
+```
+ or
+```bash
+chmod +x deprecations.sh
+./deprecations.sh
+```
+
 ## Dependencies:
 ```
 kubectl
 jq
 xargs
-```
-
-## Usage:
-```bash
-chmod +x deprecations.sh
-./deprecations.sh
 ```

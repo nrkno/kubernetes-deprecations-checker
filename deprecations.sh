@@ -1,5 +1,5 @@
 #!/bin/bash
-objects=$(cat deprecations.json)
+objects=$(curl -L https://raw.githubusercontent.com/nrkno/kubernetes-deprecations-checker/main/deprecations.json)
 keys=($(echo $objects | jq 'keys[]'))
 for key in "${keys[@]}"; do
     resources=$(echo $objects | jq -r .$key)
